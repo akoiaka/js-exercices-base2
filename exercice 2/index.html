@@ -5,8 +5,24 @@
   <title>Exercice 2</title>
 </head>
 <body>
-  <form>
-    <label for="nom">Votre nom  : </label><input type="text" name="nom" value="" id="nom"/>
-  </form>
+  <!-- <form>
+    <label for="nom">Votre nom  : </label><input type="text" name="nom" value="" id="1"/>
+  </form> -->
+  <!-- <script>
+  var x = document.getElementById("nom");
+x.addEventListener("blur", myBlurFunction, true);
+
+  function myBlurFunction() {
+      document.getElementById("text").alert("OK");
+  }
+  </script> -->
+<input type="text" name="nom" id="1" onBlur="envoyer(1)"/>
+<script>
+    function envoyer(num){
+       var valeurchamp = document.getElementById(num).value;
+       alert("Merci d etre venu");
+   }
+</script>
 </body>
+
 </html>
