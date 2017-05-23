@@ -6,5 +6,74 @@
   </head>
   <body>
       <img src="images/image1.jpg" id="image1" />
+      <!-- <SCRIPT language="JavaScript">
+      function changeImages(name,image) {
+      window.document.name.src = image ;
+      /* déclaration des images */
+      image1 = new Image()
+      image2 = new Image()
+      // ten rajoute d'aute si besoin
+      /* lien des images */
+      image1.src = "images/image1.jpg"
+      image2.src = "images/image1_2.jpg"
+      // ten rajoute d'aute si besoin
+
+      <IMG name="forum" src="images/forum.jpg" alt="forum" border="0" onmouseover="changeImages('forum','image1);return true" onmouseout="changeImages('forum','image2);return true">
+    }
+    </SCRIPT> -->
+    <!-- <script type="text/javascript">
+
+        function rollover(my_image)
+        {
+
+            my_image.src = 'images/image1_2.jpg';
+
+        }
+
+    </script> -->
+    <!-- FAIRE REVENIR L IMAGE QUAND LA SOURIS SE BARRE -->
+    <!-- bon ça fonctionne mais il vaut mieux le faire en javascript pour
+  voir plus bas -->
+    <!-- <img src="images/image1.jpg.jpg" onmouseover="rollover(this)" /> -->
+
+    <!-- <script type="text/javascript">
+
+        function mouseaway(my_image)
+        {
+
+            my_image.src = "images/image1.jpg";
+
+        }
+
+    </script>
+
+
+    <img src="images/image1.jpg" onmouseover="rollover(this)"
+    onmouseout="mouseaway(this)" /> -->
+
+    <!-- bon ça fonctionne mais il vaut mieux le faire en javascript pour
+    voir ci dessous -->
+<script type="text/javascript">
+
+var monImage = document.querySelector('img');
+
+monImage.onmouseover = function() {
+    var maSrc = monImage.getAttribute('src');
+    if(maSrc === 'images/image1.jpg') {
+      monImage.setAttribute ('src','images/image1_2.jpg');
+    } else {
+      monImage.setAttribute ('src','images/image1.jpg');
+    }
+
+    if(maSrc === 'images/image1_2.jpg') {
+      monImage.setAttribute ('src','images/image1.jpg');
+    } else {
+      monImage.setAttribute ('src','images/image1_2.jpg');
+    }
+}
+
+</script>
   </body>
+
+
 </html>
